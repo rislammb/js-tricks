@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #102a54;
+  color: #eee;
+  position: relative;
+}
+a {
+  position: fixed;
+  color: white;
+  top: 20px;
+  left: 20px;
+  text-decoration: none;
+  z-index: 3;
+}
+canvas {
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+h1 {
+  text-align: center;
+}
+#del-countdown {
+  max-width: 650px;
+  margin: 15% auto;
+}
+#clock,
+#units {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#clock span {
+  text-align: center;
+  font-size: 2.2rem;
+  padding: 17px 0;
+  width: 23%;
+  border-radius: 20px;
+}
+#clock span:nth-child(1) {
+  background-color: #fa5559;
+}
+#clock span:nth-child(2) {
+  background-color: #26c2b9;
+}
+#clock span:nth-child(3) {
+  background-color: #f6bc58;
+}
+#clock span:nth-child(4) {
+  background-color: #2dcb74;
+}
+
+#units span {
+  width: 25%;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px rgba(10, 10, 10, 0.7);
+}
+
+span.turn {
+  animation: turn 0.7s ease forwards;
+}
+
+@keyframes turn {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@media (min-width: 600px) {
+  #clock span {
+    font-size: 3rem;
+    padding: 25px 0;
+  }
+}
